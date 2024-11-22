@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyApUnGHx8KkT0vBvquvqWHCPRMtnEHr3SI",
-    authDomain: "login-with-firebase-fb795.firebaseapp.com",
-    projectId: "login-with-firebase-fb795",
-    storageBucket: "login-with-firebase-fb795.appspot.com",
-    messagingSenderId: "805796382019",
-    appId: "1:805796382019:web:ca3da4c71153b6d5bd9bf6"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECTID,
+    storageBucket: process.env.STORAGEBUCKET,
+    messagingSenderId: process.env.SENDERID,
+    appId: process.env.APPID
   };
 
   // Initialize Firebase
