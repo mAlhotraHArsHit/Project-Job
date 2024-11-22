@@ -29,8 +29,8 @@ app.post("/sendEmail/:email", (req, res) => {
   console.log('We hit the server with ',req.params.email)
   const email = req.params.email
   const mailOptions = {
-    from: "harshit1636.be22@chitkara.edu.in", // Replace with your Gmail email address
-    // to: "itz.hanish@gmail.com",
+    from: process.env.USER, // Replace with your Gmail email address
+   
     to: email,
     subject: "Project Job",
     text: "ThankYou for visiting on our website. We will provide you with latest updates on internship.",
