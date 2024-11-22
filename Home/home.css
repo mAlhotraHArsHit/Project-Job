@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+    scroll-behavior: smooth;
+}
+.logo{
+    mix-blend-mode: multiply;
+}
+nav{
+    /* position: fixed; */
+    padding-top: 5px;
+    display: flex;
+    /* justify-content: end; */
+    
+    font-size: 20px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    /* position: relative; */
+    /* display: block; */
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.navi{
+    padding-top: 10px;
+    padding-left:200px;
+    word-spacing: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* position: absolute; */
+}
+
+.nava{
+    text-decoration: none;
+    color: #21c87a;
+    /* margin-top: 100px; */
+    text-align:center;
+    padding: 5px;
+}
+
+/* Additional styling for the "Add Job" button */
+.nava.active{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+
+.add-job {
+    color: #21c87a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+
+.add-job:hover {
+    background-color: #21c87a;
+    color: white;
+}
+
+.nava:hover{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.bgimage {
+    width: 100%;
+    height: 80vh;
+    background-image: url('banner-01.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    margin-top: 30px;
+}
+.text{
+    font-size: 2rem;
+    color: white;
+}
+
+.buttonn {
+    transition: all 0.3s ease-in-out;
+    margin-top: 40px;
+  }
+  
+  .buttonn {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    background-image: linear-gradient(135deg, #21c87a 0%, #36c783 100%);
+    box-shadow: 0 10px 15px -6px rgba(0, 0, 0, 0.788);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .buttonn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  .buttonn:active {
+    opacity: 0.5;
+  }
+
+
+.jobs{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    /* padding-left: 300px; */
+    align-items: center;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+.image-container {
+    position: relative;
+    width: 200px; /* Adjust width and height according to your images */
+    height: 200px;
+    display: flex;
+    /* flex-direction: ; */
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image1, .image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    padding-left: 25px;
+}
+
+.image2 {
+    opacity: 0; /* Initially hide the second image */
+}
+
+.contain:hover .image2 {
+    opacity: 1; /* Show the second image on hover */
+    height: 120% ;
+}
+
+.contain{
+    /* border: 1px solid black; */
+    height: 200px;
+    width: 200px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: #21c87a;
+    /* display: grid; */
+    
+}
+
+.contain:hover{
+    color: black;
+    
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.274);
+}
+
+.info{
+    margin-top: 200px;
+    height: 400px;
+    width: 100%;
+    background-color: #212529;
+    
+}
+
+.content{
+    text-align: center;
+}
+
+.step{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.steps {
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    /* width: 30%; */
+    margin-top: 30px;
+    text-align: center;
+}
+.para{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.search{
+    margin-top: 100px;
+   font-size: 2rem;
+   background-color: #212529;
+}
+.sea{
+    height: 50px;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 200px;
+    font-size: 1.3rem;
+    border: 2px solid grey;
+    outline: none;
+    border-radius: 50px;
+}
+.sea:focus{
+    border: 2px solid #21c87a;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUP</title>
+    <link rel="stylesheet" href="signup.css">
+    
+</head>
+<body>
+    <nav>
+        <a href="/Home/home.html"><img src="logo.jpg"  style="width: 90px;" >
+        <span style="padding-top: 20px; font-size: 3rem;"> <span style="color: #21c78a;"> Job</span> :project</span> </a>
+    </nav>
+    <div class="header">
+        <h1>Create Your Account Today</h1>
+    </div>
+
+    <div class="cont">
+        <form action="#" method="POST" class="sform">
+            <div class="reg">
+                <label class="lab" > Username</label>
+                <div class="user">
+                    <input type="text" id="username"  required class="place">
+                </div>
+                <label class="lab" > Email</label>
+                <div class="e_mail">
+                    
+                <input type="email" id="email"  required class="place">
+                </div>
+                
+                <label class="lab"> Password</label>
+                <div class="pass">
+                    <input type="password" id="password"  required class="place">
+                </div>
+                <label class="lab"> Confirm Password</label>
+                <div class="confirm">
+                    <input type="password" id="confirm" required class="place">
+    
+                </div>
+                <div class="already">
+                    <p style="font-size:larger ;">Already have an account? <a href="/Login/login.html" style="text-decoration: none;color: #21c87a;">Login Here</a></p>
+                </div>
+                <button  class="button" id="submit" onclick="signup()">SignUp</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+<script>
+    function signup(){
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirm = document.getElementById("confirm").value;
+
+        if (validate_email(email) && validate_password(password) && validate_confirm(password, confirm)) {
+            var userData = {
+                username: username,
+                password: password,
+            };
+            saveFormData(email, userData);
+        } else {
+            alert('Invalid email, password, or password confirmation.');
+        }
+    }
+
+    function validate_email(email) {
+        expression = /^[^@]+@\w+(\.\w+)+\w$/;
+        return expression.test(email);
+    }
+
+    function validate_password(password) {
+        return password.length >= 6;
+    }
+
+    function validate_confirm(password, confirm){
+        return password === confirm;
+    }
+    
+    function saveFormData(email, userData) {
+        let key = JSON.stringify(email);
+        const jsonData = JSON.stringify(userData);
+        if (localStorage.getItem(key) !== null) {
+            alert("User already exists");
+        }
+        else {
+            localStorage.setItem(key, jsonData);
+            alert("Signup successful!");
+            window.open('/Login/login.html');
+        }
+    }
+
+    // localStorage.clear();
+</script>
+
+</html>

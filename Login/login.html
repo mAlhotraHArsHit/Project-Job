@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+
+    <div class="alert-box">
+        <p class="alert"> Invalid Login Credentials</p>
+    </div>
+
+    <nav>
+        <a href="/Home/home.html"><img src="logo.jpg"  style="width: 90px;" >
+        <span style="padding-top: 20px; font-size: 3rem;"> <span style="color: #21c78a;"> Job</span> :project</span> </a>
+    </nav>
+    <div class="header">
+        <h1>Login to your <span style="color: #21c78a;">Dreams</span></h1>
+    </div>
+
+    <div class="cont">
+        <form action="#" method="POST" class="sform">
+            <div class="reg">
+                <label class="lab">E-mail</label>
+                <div class="user">
+                    <input type="email" name="username" id="mail" required class="place">
+                </div>
+                <!-- <label class="lab"> Email</label>
+                <div class="e_mail">
+                    
+                    <input type="email" name="email"  required class="place">
+                </div> -->
+                
+                <label class="lab"> Password</label>
+                <div class="pass">
+                    <input type="password" name="password" id="pwd" required class="place">
+                </div>
+                <!-- <div class="remeber">
+                    <input type="checkbox" name="checkbox" value="tick" id="ch"> 
+                    <label for="ch">Remember Me</label>
+                </div> -->
+                <br>
+                <div class="signup">
+                    <p style="margin-top:10px ;">Don't have account? <a href="/SignUp/signup.html" style="color: #21c78a;">Register Here </a></p >
+                </div>
+                <button class="button" onclick="loogin()">Login</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+<script>
+    function loogin(){
+        var x = document.getElementById('pwd').value;
+        var y = JSON.stringify(document.getElementById('mail').value);
+        const key = localStorage.getItem(y);
+        console.log("point 1");
+            if (key !== null) {
+                const pass = JSON.parse(key)['password'] === x;
+                console.log("point 2");
+                if (pass) {
+                    alert("LoggedIn Successfully!");
+                    window.open('/Home/home.html');
+                    console.log("point 3");
+                }
+                else {
+                    alert("Incorrect Password!!!");
+                    window.location.reload();
+                }
+            }
+            else {
+                console.log("point 4");
+                alert("User does not exists!!!");
+                window.open('/SignUp/signup.html');
+                
+            }
+            console.log("point 5");
+    }
+    
+</script>
+</html>

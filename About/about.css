@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-color: #212529;
+}
+.logo{
+    mix-blend-mode: multiply;
+}
+nav{
+    /* position: sticky; */
+    padding-top: 5px;
+    display: flex;
+    /* justify-content: end; */
+    
+    font-size: 20px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    /* position: relative; */
+    /* display: block; */
+    border-bottom: 2px solid #21252962;
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.navi{
+    padding-top: 10px;
+    padding-left:200px;
+    word-spacing: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* position: absolute; */
+}
+
+.nava{
+    text-decoration: none;
+    color: #21c87a;
+    /* margin-top: 100px; */
+    text-align:center;
+    padding: 5px;
+}
+.nava:hover{
+    color: white;
+    background-color: #21c87a;
+    padding: 5px;
+    border-radius: 5px;
+}
+.nava.active{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+.add-job {
+    color: #21c87a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+
+.add-job:hover {
+    background-color: #21c87a;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+.header{
+    color: white;
+    margin-top: 50px;
+    background-color: #212529;
+    height: 200px;
+    width: 100%;
+}
+.post{
+    margin-top: 30px;
+    display: flex;
+    gap: 10rem;
+}
+
+.post span{
+    font-size: 2rem;
+}
+.header-2{
+    color: white;
+    background-color: #212529;
+    font-size: 1.2rem;
+    height: 200px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: justify;
+    /* background-image: no-repeat url(check.png); */
+    /* background: no-repeat; */
+}
+.header-2 img{
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 650px;
+    /* margin-bottom: 10px; */
+}
+
+.header-3{
+    height: 200px;
+    width: 100%;
+    margin-top: 100px;
+    background-color: #212529;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+}
+.detail{
+    color: #21c87a;
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem;
+}
+a{
+    text-decoration: none;
+    color: #21c87a;
+}

@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(mmain.png);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* This centers the form vertically */
+    
+}
+.button{
+    background-color: #26f192;
+    height: 40px;
+    width: 150px;
+    border: 1px solid #26f192;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+a{  
+    text-decoration: none;
+    color: black;
+    margin: 0;padding: 0;
+}
+.button:hover{
+    background-color: #21c78a;
+}
+.reg{
+    padding: 20px; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    text-align: left; /* Align text to the left */
+    height: auto; /* Adjust height as needed */
+    width: 300px; /* Adjust width as needed */
+}
+
+label {
+    margin-bottom: 5px; /* Add some spacing between labels and inputs */
+    
+}
+input{
+    border:none;
+}
+.place {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 20px; /* Add some spacing between inputs */
+    border: 1px solid rgb(126, 119, 119);
+}
+.place:focus{
+    border-color: #21c78a;
+    outline: none;
+}
+.lab{
+    color: rgb(126, 119, 119);
+}
+.header{
+    margin-top:100px;
+    margin-left: 510px;
+    color: rgba(0, 0, 0, 0.788);
+
+}
+
+.alert-box{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 150px;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    text-transform: capitalize;
+    background: crimson;
+    border-top: 10px solid red;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    font-family: 'roboto';
+    text-align: center;
+    transition: 1s;
+}

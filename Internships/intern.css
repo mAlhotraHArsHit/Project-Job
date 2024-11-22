@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #e4e8ec;
+}
+.logo{
+    mix-blend-mode: multiply;
+}
+
+nav{
+    /* position: sticky; */
+    padding-top: 5px;
+    display: flex;
+    /* justify-content: end; */
+    
+    font-size: 20px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    /* border-bottom: 2px solid black; */
+    /* position: relative; */
+    /* display: block; */
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.navi{
+    padding-top: 10px;
+    padding-left:200px;
+    word-spacing: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* position: absolute; */
+}
+
+.nava{
+    text-decoration: none;
+    color: #21c87a;
+    /* margin-top: 100px; */
+    text-align:center;
+    padding: 5px;
+}
+.nava:hover{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+.nava.active{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+.add-job {
+    color: #21c87a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+    height: 20px;
+}
+
+.add-job:hover {
+    background-color: #21c87a;
+    color: white;
+}
+.input{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+.input:focus{
+    outline: none;
+    border: 2px solid #21c87a;
+}
+
+button{
+    height: 35px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: #21c87a;
+    font-size: 1rem;
+    border-color: #21c87a;
+}
+button:hover{
+    background-color: #47c798;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.76);
+    transition: 0.3s ease-in-out;
+}

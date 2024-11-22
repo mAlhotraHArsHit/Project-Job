@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #212529c7;
+}
+.logo{
+    mix-blend-mode: multiply;
+}
+
+nav{
+    /* position: sticky; */
+    /* padding-top: 5px; */
+    display: flex;
+    /* justify-content: end; */
+    
+    font-size: 20px;
+    background-color: white;
+    height: 50px;
+    width: 110%;
+    /* padding-top: 30px; */
+    /* border-bottom: 2px solid black; */
+    /* position: relative; */
+    /* display: block; */
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.navi{
+    padding-top: 10px;
+    padding-left:200px;
+    word-spacing: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* position: absolute; */
+}
+
+.nava{
+    text-decoration: none;
+    color: #21c87a;
+    /* margin-top: 100px; */
+    text-align:center;
+}
+.nava.active{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+    padding: 5px;
+}
+.nava:hover{
+    background-color: #21c87a;
+    color: white;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+    padding: 5px;
+}
+.add-job {
+    color: #21c87a;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    height: 20px;
+    border: 2px solid #21c87a;
+    border-radius: 5px;
+}
+
+.add-job:hover {
+    background-color: #21c87a;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+body {
+    /* margin: 0; */
+    background-color: #e4e8ec ;
+}
+
+.h1{
+    /* text-align: center; */
+    color: #21c87a;
+    margin-bottom: 10px;
+    /* margin-bottom: 40px; */
+}
+.job {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: #212529;
+    color: rgb(255, 255, 255);
+    width: 90%;
+    border-radius: 15px;
+}
+.job:hover{
+    background-color: #474f57;
+    transition: 0.3s ease-in-out;
+}
+.job h2{
+    margin-top: 0;
+    color: white;
+    margin-top: 15px;
+    /* display: inline;  */
+}
+
+.job p {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    /* margin-top: 15px; */
+    /* display: inline; */
+}
+.apply-btn,
+.remove-job {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.apply-btn {
+    position: absolute;
+    bottom: 5px;
+    right:  5px;
+    background-color: #28a745;
+    color: #fff;
+}
+.apply-btn.applied {
+    background-color: #45a55c;
+}
+.span{
+    color: rgb(252, 246, 246);
+    font-size: larger;
+    font-weight: 600;
+    /* margin-top: 100px; */
+}
+.remove-job {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.search{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    height: 50px;
+    width: 350px;
+    font-size: 1.5rem;
+    border: 2px solid grey;
+    outline: none;
+    border-radius: 10px;
+}
+.search:focus{
+    border: 2px solid #21c87a;
+    
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" alt="logo" class="logo" />
+        <div class="navi">
+          <div class="items">
+            <img src="home_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon" />
+            <a href="/Home/home.html" class="nava">Home</a>
+          </div>
+          <div class="items">
+            <img src="work_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon" />
+            <a href="/Jobs/job-listings.html" class="nava">Jobs</a>
+          </div>
+          <div class="items">
+            <img
+              src="school_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+              class="icon"
+            />
+            <a href="/Internships/intern.html" class="nava">Internships</a>
+          </div>
+          <div class="items">
+            <img
+              src="person_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+              class="icon"
+            />
+            <a href="#" class="nava">Profile</a>
+          </div>
+          <div class="items">
+            <img src="info_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon" />
+            <a href="/About/about.html" class="nava">About</a>
+          </div>
+          <div class="items" style="margin-left: 340px;">
+            <a href="/Jobs/job.html" class="nava add-job">Add-Job</a>
+        </div>
+        </div>
+      </nav>
+
+    <h1 style="color: #00cc6d; font-size: 3rem;margin-bottom: 40px;margin-top: 40px;">Profile</h1>
+    
+    <div id="job-listings">
+        <!-- Job listings will be dynamically added here -->
+
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const jobListings = document.getElementById('job-listings');
+    // const searchBar = document.getElementById('search-bar');
+
+    // Retrieve jobs from localStorage
+    let jobs = JSON.parse(localStorage.getItem('jobs')) || [];
+
+    // Export job data as JSON
+    const jobData = JSON.stringify(jobs);
+    sessionStorage.setItem('jobData', jobData);
+
+    // Function to generate HTML for a single job listing
+    function createJobListing(job, index) {
+        const applied = sessionStorage.getItem(`applied_${index}`) === 'true';
+        const applyBtnText = applied ? 'Applied' : 'Apply';
+        const applyBtnClass = applied ? 'applied' : '';
+
+        return `
+            <div class="job">
+                <h1 class="h1">${job.title}</h1>
+                <h2>Company: </h2><p>${job.company}</p>
+                <h2>Salary: </h2><p>${job.salary}</p>
+                <h2>Experience: </h2><p>${job.experience}</p>
+                <h2>Job Type: </h2><p>${job.position}<p>
+                <h2>Location: </h2><p> ${job.location}</p>
+                <h2>Description: </h2><p>${job.description}</p>
+                <button class="apply-btn ${applyBtnClass}" data-index="${index}" ${applied ? 'disabled' : ''}>${applyBtnText}</button>
+                <button class="remove-job" data-index="${index}">&times;</button>
+
+            </div>
+        `;
+    }
+
+    // Function to render job listings on the page
+    function renderJobListings(jobsToRender) {
+        jobListings.innerHTML = jobsToRender.map((job, index) => createJobListing(job, index)).join('');
+    }
+
+    // Initial rendering of job listings
+    renderJobListings(jobs);
+
+
+    // Event listener to handle job application and removal
+    jobListings.addEventListener('click', function (event){
+        if (event.target.classList.contains('apply-btn')) {
+            const index = event.target.getAttribute('data-index');
+            const applied = sessionStorage.getItem(`applied_${index}`) === 'true';
+
+            if (!applied) {
+                sessionStorage.setItem(`applied_${index}`, 'true');
+                event.target.textContent = 'Applied';
+                event.target.classList.add('applied');
+                event.target.disabled = true;
+            }
+        } else if (event.target.classList.contains('remove-job')) {
+            const index = event.target.getAttribute('data-index');
+            jobs.splice(index, 1); // Remove job from the array
+            localStorage.setItem('jobs', JSON.stringify(jobs)); // Update localStorage
+            renderJobListings(jobs); // Re-render job listings
+        }
+    });
+});
+
+  </script>
+  <script>
+    // Get the current URL of the page
+  const currentURL = window.location.href;
+  
+  // Get all navigation links
+  const navLinks = document.querySelectorAll('.nava');
+  
+  // Loop through each link and compare its href attribute with the current URL
+  navLinks.forEach(link => {
+    // Check if the link's href attribute matches the current URL
+    if (link.href === currentURL) {
+        // If it matches, add the 'active' class
+        link.classList.add('active');
+    }
+  });
+  
+  </script>
+</html>

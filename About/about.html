@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" alt="logo" class="logo" />
+        <div class="navi">
+          <div class="items">
+            <img src="home_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon" />
+            <a href="/Home/home.html" class="nava">Home</a>
+          </div>
+          <div class="items">
+            <img src="work_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon" />
+            <a href="/Jobs/job-listings.html" class="nava">Jobs</a>
+          </div>
+          <div class="items">
+            <img
+              src="school_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+              class="icon"
+            />
+            <a href="/Internships/intern.html" class="nava">Internships</a>
+          </div>
+          <div class="items">
+            <img
+              src="person_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+              class="icon"
+            />
+            <a href="#" class="nava">Profile</a>
+          </div>
+          <div class="items">
+            <img src="info_FILL0_wght400_GRAD0_opsz24.png" alt="" class="icon" />
+            <a href="about.html" class="nava">About</a>
+          </div>
+          <div class="items" style="margin-left: 300px;">
+            <a href="/Jobs/job.html" class="nava add-job">Add-Job</a>
+        </div>
+        </div>
+    </nav>
+      <h1 style="color: #21c87a;font-size: 3rem;">About Us: </h1>
+    <div class="header">
+        <p style="font-size: 1.5rem;">JOB:Project is one of the biggest platform for either getting hired or to hire a professional. <br></p>
+        <div class="post">
+            <img src="businessman.png" alt="" style="height: 90px">
+            <p><span id="countingElement"></span>+<br> People Hired</p>
+            <img src="posting.png" alt="" style="height: 100px">
+            <p><span id="countingElement1"></span>+<br> Jobs Posted</p>
+            <img src="building.png" alt="" style="height: 90px">
+            <p><span id="countingElement2"></span>+<br> Companies</p>
+        </div>
+        <p style="text-align: end;">and counting...</p>
+    </div>
+    <div class="header-2">
+        <div class="desc">
+            <p>At JOB: Project, we prioritize authenticity and reliability in our community. Every individual and company profile undergoes a rigorous verification process to ensure trust and credibility. Our verification procedures include thorough identity checks, stringent documentation review, and comprehensive background screening. Each verified profile is marked with a distinct badge, signifying their authenticity and commitment to professionalism. We continuously monitor and update verified statuses to maintain the integrity of our platform. Our transparent verification process provides users with confidence in the authenticity of profiles they encounter. We are committed to fostering a secure and trustworthy environment for all our members, promoting meaningful connections and successful collaborations.</p>
+            <img src="check.png" alt="">
+        </div>
+    </div>
+    <div class="header-3">
+        <div class="contact">
+            <h1 style="color: white;">Contact Us</h1>
+            <div class="details">
+                <div class="detail">
+                    <img src="location.png" alt="" style="height: 20px;"><a href="https://maps.app.goo.gl/fvGBue6L2TvLAq5y8">Chitkara University,Rajpura</a>
+                </div>
+                <div class="detail">
+                    <img src="telephone.png" alt="" style="height: 20px;"><a href="tel:+91999988887">+91999988887</a>
+                </div>
+                <div class="detail">
+                    <img src="mail.png" alt="" style="height: 20px;"><a href="mailto:harshit1636.be22@chitkara.edu.in">harshit1636.be22@chitkara.edu.in</a>
+                </div>
+                <div class="detail">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Function to animate the counting effect
+    function countUp(target, duration, elementId) {
+        let start = 0;
+        const increment = target / duration;
+        const countingElement = document.getElementById(elementId);
+
+        // Function to update the counting element
+        function updateCount() {
+            start += increment;
+            countingElement.innerText = Math.floor(start);
+            if (start < target) {
+                requestAnimationFrame(updateCount);
+            } else {
+                countingElement.innerText = target;
+            }
+        }
+
+        // Start the counting animation
+        updateCount();
+    }
+
+    // Call the countUp function with different target numbers and durations for each element
+    countUp(2000, 200, "countingElement"); // Count up to 1000 in 2 seconds for element with id "countingElement1"
+    countUp(5000, 200, "countingElement1"); // Count up to 500 in 1.5 seconds for element with id "countingElement2"
+    countUp(200, 200, "countingElement2"); // Count up to 1500 in 2.5 seconds for element with id "countingElement3"
+</script>
+
+<script>
+  // Get the current URL of the page
+const currentURL = window.location.href;
+
+// Get all navigation links
+const navLinks = document.querySelectorAll('.nava');
+
+// Loop through each link and compare its href attribute with the current URL
+navLinks.forEach(link => {
+  // Check if the link's href attribute matches the current URL
+  if (link.href === currentURL) {
+      // If it matches, add the 'active' class
+      link.classList.add('active');
+  }
+});
+</script>
+</html>
